@@ -24,5 +24,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'welcome', welcome),
     # path('player/home', player.views.home)
-    url(r'^player/', include('player.urls'))
+    url(r'^player/', include('player.urls')),
+    url(r'^$', welcome)
 ]
