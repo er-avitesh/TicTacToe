@@ -1,0 +1,6 @@
+Django
+djangorestframework
+gunicorn
+static3
+dj-static
+whitenoise
