@@ -1,8 +1,10 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 
 from gameplay.models import Game
 
 
+@login_required
 def home(request):
     my_games = Game.objects.games_for_user(request.user)
     active_games = my_games.active_games()
@@ -18,4 +20,3 @@ def home(request):
 #    all_my_games = list(games_first_player) + \
 #                   list(games_second_player)
 #    return render(request, "player/home.html", {'games': all_my_games})
-
