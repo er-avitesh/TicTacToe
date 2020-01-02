@@ -4,3 +4,4 @@ gunicorn
 static3
 dj-static
 whitenoise
+django-crispy-forms

@@ -35,8 +35,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'player',
     'gameplay',
-    'player'
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -124,3 +125,5 @@ STATICFILES_DIRS = [
 LOGIN_REDIRECT_URL = "player_home"
 LOGOUT_REDIRECT_URL = "tictactoe_home"
 LOGIN_URL = "player_login"
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
