@@ -11,9 +11,11 @@ Player
     <div class="col-md-6">
         <h3>Active Games</h3>
 
-        <ul>
+        <ul class="list-group">
             {% for g in games %}
-            <li>Game {{ g.id }}: {{ g.first_player }} vs {{ g.second_player }}</li>
+            <a class="list-group-item" href="{{ g.get_absolute_url }}">
+                {{ g.first_player }} vs {{ g.second_player }}
+            </a>
             {% endfor %}
         </ul>
 
@@ -36,7 +38,6 @@ Player
                     </a>
                 {% endfor %}
             </div>
-
         {% else %}
             <p>You Have no Pending Invitations</p>
         {% endif %}

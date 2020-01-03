@@ -25,5 +25,6 @@ urlpatterns = [
     url(r'welcome', welcome),
     # path('player/home', player.views.home)
     url(r'^player/', include('player.urls')),
+    url(r'^games/', include('gameplay.urls')),
     url(r'^$', welcome, name="tictactoe_home"),
 ]
